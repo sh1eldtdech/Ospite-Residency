@@ -23,7 +23,7 @@ export default function Contact() {
       <section
         className="relative h-[55vh] flex items-end pb-16 px-6"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=1600&q=80')",
+          backgroundImage: "url('/hotel/docx_02.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

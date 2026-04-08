@@ -30,15 +30,22 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex flex-col leading-none group">
-          <span
-            className="text-2xl font-display font-semibold text-gold-400 tracking-wide"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
-          >
-            Hotel Ospite
-          </span>
-          <span className="text-xs tracking-[0.3em] uppercase text-cream/70 font-body">
-            Residency · Gangtok
+        <Link to="/" className="flex items-center gap-3 leading-none group">
+          <img
+            src="/hotel/logo.png"
+            alt="Hotel Ospite Residency logo"
+            className="h-10 w-auto rounded-md object-contain"
+          />
+          <span className="flex flex-col">
+            <span
+              className="text-2xl font-display font-semibold text-gold-400 tracking-wide"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Hotel Ospite
+            </span>
+            <span className="text-xs tracking-[0.3em] uppercase text-cream/70 font-body">
+              Residency · Gangtok
+            </span>
           </span>
         </Link>
 

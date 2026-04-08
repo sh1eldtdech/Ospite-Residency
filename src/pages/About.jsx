@@ -19,7 +19,7 @@ export default function About() {
       <section
         className="relative h-[60vh] flex items-end pb-16 px-6"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1600&q=80')",
+          backgroundImage: "url('/hotel/docx_09.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -42,14 +42,14 @@ export default function About() {
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden img-zoom shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80"
+                src="/hotel/docx_07.jpeg"
                 alt="Hotel interior"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl overflow-hidden border-4 border-cream shadow-xl img-zoom">
               <img
-                src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=400&q=80"
+                src="/hotel/docx_04.jpeg"
                 alt="Gangtok view"
                 className="w-full h-full object-cover"
               />
@@ -108,29 +108,24 @@ export default function About() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
-            { name: 'Vidhya Gurung', role: 'Proprietor', phone: '9609851302', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80', quote: 'We strive to make every guest feel at home in the lap of the Himalayas.' },
-            { name: 'Indrajit Barman', role: 'Manager', phone: '6295498407', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80', quote: 'Our team is dedicated to ensuring your comfort from check-in to check-out.' },
-          ].map(({ name, role, phone, img, quote }) => (
-            <div key={name} className="card-3d bg-cream rounded-3xl overflow-hidden shadow-lg flex flex-col md:flex-row">
-              <div className="w-full md:w-40 aspect-square md:aspect-auto shrink-0 img-zoom overflow-hidden">
-                <img src={img} alt={name} className="w-full h-full object-cover" />
-              </div>
-              <div className="p-8 flex flex-col justify-center">
-                <p className="text-xs uppercase tracking-[0.25em] text-gold-600 font-body mb-1">{role}</p>
-                <h3
-                  className="text-2xl font-display font-semibold text-forest-800 mb-2"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                >
-                  {name}
-                </h3>
-                <p className="text-sm text-forest-500 font-body italic mb-4">"{quote}"</p>
-                <a
-                  href={`tel:${phone}`}
-                  className="text-sm font-body font-semibold text-forest-700 hover:text-gold-600 transition-colors"
-                >
-                  📞 {phone}
-                </a>
-              </div>
+            { name: 'Vidhya Gurung', role: 'Proprietor', phone: '9609851302', quote: 'We strive to make every guest feel at home in the lap of the Himalayas.' },
+            { name: 'Indrajit Barman', role: 'Manager', phone: '6295498407', quote: 'Our team is dedicated to ensuring your comfort from check-in to check-out.' },
+          ].map(({ name, role, phone, quote }) => (
+            <div key={name} className="card-3d bg-cream rounded-3xl shadow-lg p-8">
+              <p className="text-xs uppercase tracking-[0.25em] text-gold-600 font-body mb-1">{role}</p>
+              <h3
+                className="text-2xl font-display font-semibold text-forest-800 mb-2"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                {name}
+              </h3>
+              <p className="text-sm text-forest-500 font-body italic mb-4">"{quote}"</p>
+              <a
+                href={`tel:${phone}`}
+                className="text-sm font-body font-semibold text-forest-700 hover:text-gold-600 transition-colors"
+              >
+                📞 {phone}
+              </a>
             </div>
           ))}
         </div>

@@ -6,6 +6,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         {/* Brand */}
         <div>
+          <img
+            src="/hotel/logo.png"
+            alt="Hotel Ospite Residency logo"
+            className="h-14 w-auto rounded-md object-contain mb-4"
+          />
           <h3
             className="text-3xl font-display font-semibold text-gold-400 mb-2"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}

@@ -9,7 +9,7 @@ const rooms = [
     name: 'Super Deluxe Room',
     tagline: 'Premium Himalayan Views',
     desc: 'Spacious and elegantly designed rooms with scenic greenery views. Equipped with modern amenities including free Wi-Fi for a comfortable and premium stay.',
-    img: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80',
+    img: '/hotel/docx_03.jpeg',
     price: { ep: 2000, cp: 2200, map: 2500, ap: 2800 },
     perks: ['Greenery Views', 'Free Wi-Fi', 'Premium Furnishing', 'Attached Washroom', 'Tea/Coffee Maker'],
     badge: 'Best Value',
@@ -19,7 +19,7 @@ const rooms = [
     name: 'Deluxe Room',
     tagline: 'Comfortable Nature Retreat',
     desc: 'Cozy and well-furnished rooms offering a pleasant view of nature. Ideal for guests seeking comfort with all essential facilities, including free Wi-Fi.',
-    img: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=900&q=80',
+    img: '/hotel/docx_06.jpeg',
     price: { ep: 1800, cp: 2000, map: 2300, ap: 2600 },
     perks: ['Nature Views', 'Free Wi-Fi', 'Well-Furnished', 'Attached Washroom', 'Housekeeping'],
     badge: null,
@@ -29,7 +29,7 @@ const rooms = [
     name: 'Standard Room',
     tagline: 'Smart & Budget-Friendly',
     desc: 'Comfortable and budget-friendly rooms designed to meet all basic needs of guests, including free Wi-Fi.',
-    img: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?w=900&q=80',
+    img: '/hotel/docx_07.jpeg',
     price: { ep: 1500, cp: 1700, map: 2000, ap: 2300 },
     perks: ['Free Wi-Fi', 'Attached Washroom', 'Daily Housekeeping', '24×7 Hot Water', 'Power Backup'],
     badge: 'Most Affordable',
@@ -54,7 +54,7 @@ export default function Rooms() {
       <section
         className="relative h-[55vh] flex items-end pb-16 px-6"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1600&q=80')",
+          backgroundImage: "url('/hotel/docx_03.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -202,7 +202,7 @@ export default function Rooms() {
           <div className="card-3d bg-cream rounded-3xl overflow-hidden shadow-lg">
             <div className="h-56 img-zoom overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+                src="/hotel/docx_08.jpeg"
                 alt="Dining"
                 className="w-full h-full object-cover"
               />
@@ -221,7 +221,7 @@ export default function Rooms() {
           <div className="card-3d bg-cream rounded-3xl overflow-hidden shadow-lg">
             <div className="h-56 img-zoom overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&q=80"
+                src="/hotel/docx_09.jpeg"
                 alt="Parking"
                 className="w-full h-full object-cover"
               />
