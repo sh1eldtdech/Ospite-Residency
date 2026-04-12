@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Rooms from './pages/Rooms'
 import Travel from './pages/Travel'
+import DistrictPage from './pages/DistrictPage'
 import Contact from './pages/Contact'
 
 function ScrollToTop() {
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/travel" element={<Travel />} />
+          <Route path="/travel/:districtSlug" element={<DistrictPage />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
