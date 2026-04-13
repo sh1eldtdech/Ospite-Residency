@@ -436,7 +436,7 @@ export const districtsData = {
       },
       {
         title: "Best Time to Visit",
-        value: "March to June & September to November",
+        value: "January to April (Snow Fall) & September to November",
         icon: "📅",
         color: "bg-amber-50 text-amber-700",
       },
@@ -563,7 +563,7 @@ export const districtsData = {
         img: north_sikkim_assets.Naga_falls,
       },
       {
-        title: "Dzonggu Valley",
+        title: "Dzongu Valley",
         tag: "Heritage",
         desc: "A special reserve for the indigenous Lepcha community.",
         img: north_sikkim_assets.Dzonggu_valley,

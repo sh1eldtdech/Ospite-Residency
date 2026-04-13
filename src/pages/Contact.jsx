@@ -159,7 +159,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  <label className={labelCls}>Special Requests</label>
+                  <label className={labelCls}>Enquiry</label>
                   <textarea
                     name="message"
                     value={form.message}

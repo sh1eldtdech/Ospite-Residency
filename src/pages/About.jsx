@@ -31,7 +31,7 @@ export default function About() {
             className="text-5xl md:text-7xl font-display font-semibold text-cream"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            About <span className="italic text-gold-400">Ospite</span>
+            About <span className="italic text-gold-400">Us</span>
           </h1>
         </div>
       </section>
@@ -56,20 +56,23 @@ export default function About() {
             </div>
           </div>
           <div>
-            <SectionTitle tag="Who We Are" title="Comfort in the Heart of Sikkim" />
+            <SectionTitle title="Comfort in the Heart of Sikkim" />
             <p className="text-forest-600 font-body leading-relaxed mb-4">
-              Hotel Ospite Residency is nestled in the peaceful surroundings of Suhim Colony, Sichey — 
-              just 3 km away from Gangtok's bustling main town. The name <em>"Ospite"</em> means 
-              "guest" in Italian, reflecting our philosophy: every visitor is an honoured guest.
+              Hotel Ospite Residency is nestled in the peaceful surroundings of Suhim Colony, Sichey —
+              just 3 km away from Gangtok's bustling main town and the popular MG Marg (MG Market Place).
+              The name <em>"Ospite"</em> means "guest" in Italian, reflecting our philosophy: every visitor
+              is an honoured guest.
             </p>
+
             <p className="text-forest-600 font-body leading-relaxed mb-4">
-              We offer a homely atmosphere with breathtaking natural views, making us an ideal retreat 
+              We offer a homely atmosphere with breathtaking natural views, making us an ideal retreat
               for travellers seeking comfort and tranquillity amidst Sikkim's magnificent landscapes.
             </p>
+
             <p className="text-forest-600 font-body leading-relaxed">
-              Conveniently located near popular tourist attractions such as Ban Jhakri Falls Park, 
-              Tashi View Point, Gonjang Monastery and Luing Garden, and only a 7-minute drive 
-              towards STNM Hospital — we ensure both accessibility and relaxation.
+              Conveniently located near popular tourist attractions such as Ban Jhakri Falls Park,
+              Tashi View Point, Gonjang Monastery, Luing Garden, and MG Marg (the heart of Gangtok),
+              and only a 7-minute drive towards STNM Hospital — we ensure both accessibility and relaxation.
             </p>
           </div>
         </div>
@@ -79,7 +82,7 @@ export default function About() {
       <section className="bg-forest-700 py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div ref={r2} className="reveal">
-            <SectionTitle tag="Our Philosophy" title="What Sets Us Apart" light />
+            <SectionTitle tag="" title="What Sets Us Apart" light />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {values.map(({ icon, title, desc }) => (

@@ -39,7 +39,7 @@ export default function Travel() {
         <SectionTitle
           tag="Travel Guide"
           title="Sikkim Districts"
-          sub="Click any district to open its dedicated page with attractions and district details."
+          sub="Choose a district and begin your journey through its iconic spots, culture, and breathtaking landscapes"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {districtCards.map((district) => (
@@ -72,7 +72,7 @@ export default function Travel() {
               <div className="p-6">
                 <p className="text-forest-500 font-body leading-relaxed">{district.description}</p>
                 <span className="inline-block mt-4 text-gold-600 font-body font-semibold">
-                  Open district page →
+                  Explore {district.name} →
                 </span>
               </div>
             </Link>
