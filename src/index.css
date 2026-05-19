@@ -68,6 +68,17 @@ body {
   transform: scale(1.08);
 }
 
+.modern-panel {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(245, 237, 216, 0.72));
+  backdrop-filter: blur(8px);
+}
+
+.district-glass {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.2), rgba(212, 168, 83, 0.1));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #f0f7f4; }
 ::-webkit-scrollbar-thumb { background: #1B4332; border-radius: 3px; }

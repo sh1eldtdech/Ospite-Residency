@@ -5,7 +5,7 @@ const values = [
   { icon: '🌿', title: 'Nature-Immersed', desc: 'Surrounded by Sikkim\'s lush greenery with breathtaking Himalayan vistas from every room.' },
   { icon: '🏠', title: 'Home-like Warmth', desc: 'We treat every guest as family, offering personalised service and a welcoming atmosphere.' },
   { icon: '🍛', title: 'Authentic Cuisine', desc: 'Savour Bengali and local Sikkimese delicacies prepared fresh in our elegant dining hall.' },
-  { icon: '📍', title: 'Prime Location', desc: 'Just 3 km from main Gangtok, close to top attractions, yet blissfully peaceful.' },
+  { icon: '📍', title: 'Prime Location', desc: 'Just 2 KM from main Gangtok, close to top attractions, yet blissfully peaceful.' },
 ]
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
       <section
         className="relative h-[60vh] flex items-end pb-16 px-6"
         style={{
-          backgroundImage: "url('/hotel/docx_09.jpeg')",
+          backgroundImage: "url('/hotel/about_bikes.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -31,7 +31,7 @@ export default function About() {
             className="text-5xl md:text-7xl font-display font-semibold text-cream"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            About <span className="italic text-gold-400">Ospite</span>
+            About <span className="italic text-gold-400">Us</span>
           </h1>
         </div>
       </section>
@@ -40,14 +40,21 @@ export default function About() {
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div ref={r1} className="reveal grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <div className="aspect-square rounded-3xl overflow-hidden img-zoom shadow-2xl">
+            {/* Background "Ospite" text */}
+            <div 
+              className="absolute -top-16 -left-12 text-[8rem] md:text-[12rem] font-display font-bold text-forest-800/10 pointer-events-none select-none z-0 tracking-widest" 
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Ospite
+            </div>
+            <div className="relative z-10 aspect-square rounded-3xl overflow-hidden img-zoom shadow-2xl">
               <img
                 src="/hotel/docx_07.jpeg"
                 alt="Hotel interior"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl overflow-hidden border-4 border-cream shadow-xl img-zoom">
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl overflow-hidden border-4 border-cream shadow-xl img-zoom z-20">
               <img
                 src="/hotel/docx_04.jpeg"
                 alt="Gangtok view"
@@ -56,20 +63,23 @@ export default function About() {
             </div>
           </div>
           <div>
-            <SectionTitle tag="Who We Are" title="Comfort in the Heart of Sikkim" />
+            <SectionTitle title="Comfort in the Heart of Sikkim" />
             <p className="text-forest-600 font-body leading-relaxed mb-4">
-              Hotel Ospite Residency is nestled in the peaceful surroundings of Suhim Colony, Sichey — 
-              just 3 km away from Gangtok's bustling main town. The name <em>"Ospite"</em> means 
-              "guest" in Italian, reflecting our philosophy: every visitor is an honoured guest.
+              Hotel Ospite Residency is nestled in the peaceful surroundings of Suhim Colony, Sichey —
+              just 2 KM away from Gangtok's bustling main town and the popular MG Marg (MG Market Place).
+              The name <em>"Ospite"</em> means "guest" in Italian, reflecting our philosophy: every visitor
+              is an honoured guest.
             </p>
+
             <p className="text-forest-600 font-body leading-relaxed mb-4">
-              We offer a homely atmosphere with breathtaking natural views, making us an ideal retreat 
+              We offer a homely atmosphere with breathtaking natural views, making us an ideal retreat
               for travellers seeking comfort and tranquillity amidst Sikkim's magnificent landscapes.
             </p>
+
             <p className="text-forest-600 font-body leading-relaxed">
-              Conveniently located near popular tourist attractions such as Ban Jhakri Falls Park, 
-              Tashi View Point, Gonjang Monastery and Luing Garden, and only a 7-minute drive 
-              towards STNM Hospital — we ensure both accessibility and relaxation.
+              Conveniently located near popular tourist attractions such as Ban Jhakri Falls Park,
+              Tashi View Point, Lingdok/Ranka monastery, Luing Garden, and MG Marg (the heart of Gangtok),
+              and only a 7-minute drive towards STNM Hospital — we ensure both accessibility and relaxation.
             </p>
           </div>
         </div>
@@ -79,7 +89,7 @@ export default function About() {
       <section className="bg-forest-700 py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div ref={r2} className="reveal">
-            <SectionTitle tag="Our Philosophy" title="What Sets Us Apart" light />
+            <SectionTitle tag="" title="What Sets Us Apart" light />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {values.map(({ icon, title, desc }) => (

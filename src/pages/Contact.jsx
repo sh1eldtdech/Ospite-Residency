@@ -52,17 +52,23 @@ export default function Contact() {
 
             {/* Quick contacts */}
             {[
-              { label: 'Address', icon: '📍', val: 'Suhim Colony, Helipad Road\nSichey, Gangtok – 737101\nSikkim, India' },
-              { label: 'Proprietor', icon: '👩‍💼', val: 'Vidhya Gurung\n+91 9609851302' },
-              { label: 'Manager', icon: '👨‍💼', val: 'Indrajit Barman\n+91 6295498407' },
-              { label: 'Email', icon: '✉️', val: 'ospiter1234@gmail.com' },
-              { label: 'Website', icon: '🌐', val: 'www.ospiteresidency.com' },
-            ].map(({ label, icon, val }) => (
+              { label: 'Address', icon: '📍', val: 'Suhim Colony, Helipad Road\nSichey, Gangtok – 737101\nSikkim, India', href: 'https://www.google.com/maps/search/?api=1&query=Hotel+Ospite+Residency,+Suhim+Colony,+Sichey,+Gangtok' },
+              { label: 'Proprietor', icon: '👩‍💼', val: 'Vidhya Gurung\n+91 9609851302', href: 'tel:+919609851302' },
+              { label: 'Manager', icon: '👨‍💼', val: 'Indrajit Barman\n+91 6295498407', href: 'tel:+916295498407' },
+              { label: 'Email', icon: '✉️', val: 'ospiter1234@gmail.com', href: 'mailto:ospiter1234@gmail.com' },
+              { label: 'Website', icon: '🌐', val: 'www.ospiteresidency.com', href: 'https://www.ospiteresidency.com' },
+            ].map(({ label, icon, val, href }) => (
               <div key={label} className="flex gap-4 items-start p-5 bg-parchment rounded-2xl border border-gold-300/30">
                 <span className="text-2xl mt-0.5">{icon}</span>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-forest-400 font-body mb-1">{label}</p>
-                  <p className="text-sm font-body text-forest-700 whitespace-pre-line">{val}</p>
+                  {href ? (
+                    <a href={href} target={label === 'Address' || label === 'Website' ? "_blank" : undefined} rel="noopener noreferrer" className="text-sm font-body text-forest-700 whitespace-pre-line hover:text-gold-600 transition-colors block">
+                      {val}
+                    </a>
+                  ) : (
+                    <p className="text-sm font-body text-forest-700 whitespace-pre-line">{val}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -159,7 +165,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  <label className={labelCls}>Special Requests</label>
+                  <label className={labelCls}>Enquiry</label>
                   <textarea
                     name="message"
                     value={form.message}
@@ -178,6 +184,22 @@ export default function Contact() {
               </form>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* Embedded Map */}
+      <section className="px-6 pb-24 max-w-7xl mx-auto">
+        <div className="w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-lg border border-gold-300/30">
+          <iframe
+            title="Hotel Ospite Residency Location"
+            src="https://www.google.com/maps?q=Hotel+Ospite+Residency,+Suhim+Colony,+Sichey,+Gangtok&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
 

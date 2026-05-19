@@ -48,14 +48,12 @@ export default function Home() {
           >
             Welcome to <br />
             <span className="text-gold-400 italic font-medium">
-              Comfort
-            </span>{" "}
-            &amp;{" "}
-            <span className="text-gold-400 italic font-medium">Serenity</span>
+              Hotel Ospite Residency for comfort.
+            </span>
           </h1>
           <p className="text-base md:text-xl font-body text-cream/70 mt-6 mb-10 max-w-xl mx-auto leading-relaxed">
             A home away from home — nestled in the peaceful Himalayan
-            surroundings, just 3 km from Gangtok's heart.
+            surroundings, just 2 KM from Gangtok's heart.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -124,7 +122,7 @@ export default function Home() {
             </h2>
             <p className="text-base text-forest-600 font-body leading-relaxed mb-4">
               Hotel Ospite Residency is nestled in the peaceful surroundings of
-              Suhim Colony, Sichey — just 3 km away from Gangtok's bustling main
+              Suhim Colony, Sichey — just 2 KM away from Gangtok's bustling main
               town. Offering a homely atmosphere with breathtaking natural
               views, we're an ideal retreat for travellers seeking comfort and
               tranquillity.
@@ -151,8 +149,10 @@ export default function Home() {
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-6 -left-6 bg-gold-500 text-forest-900 px-6 py-4 rounded-xl shadow-xl font-body">
-              <p className="text-2xl font-bold">₹1,500</p>
-              <p className="text-xs font-medium">Starting per night</p>
+              <p className="text-2xl font-bold">Warm Himalayan hospitality</p>
+              <p className="text-xs font-medium">
+                A cozy retreat near Gangtok's top attractions
+              </p>
             </div>
           </div>
         </div>

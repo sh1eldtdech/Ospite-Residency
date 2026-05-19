@@ -9,7 +9,7 @@ export default function Footer() {
           <img
             src="/hotel/logo.png"
             alt="Hotel Ospite Residency logo"
-            className="h-14 w-auto rounded-md object-contain mb-4"
+            className="h-16 w-auto object-contain mb-4 scale-110 origin-left"
           />
           <h3
             className="text-3xl font-display font-semibold text-gold-400 mb-2"
