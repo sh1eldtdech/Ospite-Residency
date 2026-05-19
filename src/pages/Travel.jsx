@@ -16,9 +16,9 @@ export default function Travel() {
       <section
         className="relative h-[60vh] flex items-end pb-16 px-6"
         style={{
-          backgroundImage: "url('/travel/kanchenjunga.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: "url('/travel/Luing Garden.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-forest-900 via-forest-900/30 to-transparent" />

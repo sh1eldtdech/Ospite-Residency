@@ -65,10 +65,9 @@ export default function About() {
           <div>
             <SectionTitle title="Comfort in the Heart of Sikkim" />
             <p className="text-forest-600 font-body leading-relaxed mb-4">
-              Hotel Ospite Residency is nestled in the peaceful surroundings of Suhim Colony, Sichey —
-              just 2 KM away from Gangtok's bustling main town and the popular MG Marg (MG Market Place).
-              The name <em>"Ospite"</em> means "guest" in Italian, reflecting our philosophy: every visitor
-              is an honoured guest.
+              Hotel Ospite Residency is nestled in the peaceful surroundings of Suhim Colony, Sichey — 
+              just 3 km away from Gangtok's bustling main town. The name <em>"Ospite"</em> means 
+              "guest" in Italian, reflecting our philosophy: every visitor is an honoured guest.
             </p>
 
             <p className="text-forest-600 font-body leading-relaxed mb-4">
@@ -77,9 +76,9 @@ export default function About() {
             </p>
 
             <p className="text-forest-600 font-body leading-relaxed">
-              Conveniently located near popular tourist attractions such as Ban Jhakri Falls Park,
-              Tashi View Point, Lingdok/Ranka monastery, Luing Garden, and MG Marg (the heart of Gangtok),
-              and only a 7-minute drive towards STNM Hospital — we ensure both accessibility and relaxation.
+              Conveniently located near popular tourist attractions such as Ban Jhakri Falls Park, 
+              Tashi View Point, Gonjang Monastery and Luing Garden, and only a 7-minute drive 
+              towards STNM Hospital — we ensure both accessibility and relaxation.
             </p>
           </div>
         </div>
