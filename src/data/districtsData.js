@@ -6,7 +6,7 @@ import {
 } from "../assets/assets";
 
 export const districtsData = {
-  east: {
+  gangtok: {
     name: "Gangtok",
     heroImage: "/assets/east-sikkim.jpg",
     description:
@@ -129,12 +129,6 @@ export const districtsData = {
         img: east_sikkim_assets.Bar_Changey_Falls,
       },
       {
-        title: "Tholung Monastery",
-        tag: "Spiritual",
-        desc: "An ancient monastery accessible via a scenic jungle trek.",
-        img: east_sikkim_assets.Tholung_Monastery,
-      },
-      {
         title: "Gonjang Monastery",
         tag: "Spiritual",
         desc: "A peaceful monastery offering cultural insights and spiritual solace.",
@@ -166,7 +160,7 @@ export const districtsData = {
       },
     ],
   },
-  west: {
+  geyzing: {
     name: "Geyzing",
     heroImage: "/assets/west-sikkim.jpg",
     description:
@@ -324,15 +318,9 @@ export const districtsData = {
         desc: "A highly sacred monastery known for the Bhumchu festival.",
         img: west_sikkim_assets.Tashiding,
       },
-      {
-        title: "Melli",
-        tag: "Town",
-        desc: "Strategic entry point known for its confluence and rafting.",
-        img: west_sikkim_assets.melli,
-      },
     ],
   },
-  north: {
+  mangan: {
     name: "Mangan",
     heroImage: "/assets/north-sikkim.jpg",
     description:
@@ -540,7 +528,7 @@ export const districtsData = {
       },
     ],
   },
-  south: {
+  namchi: {
     name: "Namchi",
     heroImage: "/assets/south-sikkim.jpg",
     description:
