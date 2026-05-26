@@ -99,28 +99,31 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-cream/30">
+      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-cream/40">
         <p>
           © {new Date().getFullYear()} Hotel Ospite Residency. All rights
           reserved.
         </p>
-        <div className="space-y-1 text-right">
-          <p>
-            Designed and developed by{" "}
-            <a
-              href="https://sh1eldtech.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-gold-400 hover:text-emerald-400 transition-colors duration-200"
-            >
-              SH1ELD Tech
-            </a>
-          </p>
-          <p>
-            Powered by <span className="text-gold-400">SH1ELD Tech</span>. Made
-            with 💚 in Gangtok
-          </p>
+        <div>
+          <Link
+            to="/privacy"
+            className="hover:text-gold-400 transition-colors duration-200"
+          >
+            Privacy Policy
+          </Link>
         </div>
+        <p className="text-right">
+          Powered by{" "}
+          <a
+            href="https://sh1eldtech.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gold-400 hover:text-emerald-400 transition-colors duration-200"
+          >
+            SH1ELD Tech
+          </a>
+          . Made with 💚 in Gangtok
+        </p>
       </div>
     </footer>
   );

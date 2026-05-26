@@ -8,6 +8,7 @@ import Rooms from './pages/Rooms'
 import Travel from './pages/Travel'
 import DistrictPage from './pages/DistrictPage'
 import Contact from './pages/Contact'
+import PrivacyPolicy from './pages/LegalDocs'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -28,9 +29,11 @@ export default function App() {
           <Route path="/travel" element={<Travel />} />
           <Route path="/travel/:districtSlug" element={<DistrictPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </main>
       <Footer />
     </BrowserRouter>
   )
 }
+
