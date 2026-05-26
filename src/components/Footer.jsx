@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -21,7 +21,7 @@ export default function Footer() {
             A Home Away From Home
           </p>
           <p className="text-sm leading-relaxed text-cream/60">
-            Nestled in Suhim Colony, Sichey, Gangtok — where Himalayan serenity 
+            Nestled in Suhim Colony, Sichey, Gangtok — where Himalayan serenity
             meets warm hospitality.
           </p>
         </div>
@@ -32,7 +32,13 @@ export default function Footer() {
             Quick Links
           </h4>
           <div className="flex flex-col gap-3">
-            {[['/', 'Home'], ['/about', 'About Us'], ['/rooms', 'Our Rooms'], ['/travel', 'Travel Guide'], ['/contact', 'Contact & Booking']].map(([to, label]) => (
+            {[
+              ["/", "Home"],
+              ["/about", "About Us"],
+              ["/rooms", "Our Rooms"],
+              ["/travel", "Travel Guide"],
+              ["/contact", "Contact & Booking"],
+            ].map(([to, label]) => (
               <Link
                 key={to}
                 to={to}
@@ -50,17 +56,42 @@ export default function Footer() {
             Contact Us
           </h4>
           <div className="space-y-3 text-sm text-cream/60">
-            <p>Suhim Colony, Helipad Road<br />Sichey, Gangtok – 737101, Sikkim</p>
             <p>
-              <span className="text-cream/40 text-xs uppercase tracking-wider">Proprietor</span><br />
-              Vidhya Gurung — <a href="tel:9609851302" className="hover:text-gold-400 transition-colors">9609851302</a>
+              Suhim Colony, Helipad Road
+              <br />
+              Sichey, Gangtok – 737101, Sikkim
             </p>
             <p>
-              <span className="text-cream/40 text-xs uppercase tracking-wider">Manager</span><br />
-              Indrajit Barman — <a href="tel:6295498407" className="hover:text-gold-400 transition-colors">6295498407</a>
+              <span className="text-cream/40 text-xs uppercase tracking-wider">
+                Proprietor
+              </span>
+              <br />
+              Vidhya Gurung —{" "}
+              <a
+                href="tel:9609851302"
+                className="hover:text-gold-400 transition-colors"
+              >
+                9609851302
+              </a>
             </p>
             <p>
-              <a href="mailto:ospiter1234@gmail.com" className="hover:text-gold-400 transition-colors">
+              <span className="text-cream/40 text-xs uppercase tracking-wider">
+                Manager
+              </span>
+              <br />
+              Indrajit Barman —{" "}
+              <a
+                href="tel:6295498407"
+                className="hover:text-gold-400 transition-colors"
+              >
+                6295498407
+              </a>
+            </p>
+            <p>
+              <a
+                href="mailto:ospiter1234@gmail.com"
+                className="hover:text-gold-400 transition-colors"
+              >
                 ospiter1234@gmail.com
               </a>
             </p>
@@ -68,10 +99,29 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-cream/30">
-        <p>© {new Date().getFullYear()} Hotel Ospite Residency. All rights reserved.</p>
-        <p>www.ospiteresidency.com</p>
+      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-cream/30">
+        <p>
+          © {new Date().getFullYear()} Hotel Ospite Residency. All rights
+          reserved.
+        </p>
+        <div className="space-y-1 text-right">
+          <p>
+            Designed and developed by{" "}
+            <a
+              href="https://sh1eldtech.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gold-400 hover:text-emerald-400 transition-colors duration-200"
+            >
+              SH1ELD Tech
+            </a>
+          </p>
+          <p>
+            Powered by <span className="text-gold-400">SH1ELD Tech</span>. Made
+            with 💚 in Gangtok
+          </p>
+        </div>
       </div>
     </footer>
-  )
+  );
 }
