@@ -33,7 +33,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: "url('/hotel/docx_01.jpeg')",
+            backgroundImage: "url('/hotel/home.webp')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-forest-900/80 via-forest-900/50 to-forest-900/80" />

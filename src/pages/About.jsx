@@ -19,7 +19,7 @@ export default function About() {
       <section
         className="relative h-[60vh] flex items-end pb-16 px-6"
         style={{
-          backgroundImage: "url('/hotel/about_bikes.jpg')",
+          backgroundImage: "url('/hotel/about.jfif.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

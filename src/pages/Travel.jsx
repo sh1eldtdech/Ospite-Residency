@@ -16,7 +16,7 @@ export default function Travel() {
       <section
         className="relative h-[60vh] flex items-end pb-16 px-6"
         style={{
-          backgroundImage: "url('/travel/Luing Garden.jpg')",
+          backgroundImage: "url('/hotel/travel.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
