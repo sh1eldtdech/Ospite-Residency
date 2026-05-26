@@ -48,7 +48,7 @@ export default function Home() {
           >
             Welcome to <br />
             <span className="text-gold-400 italic font-medium">
-              Hotel Ospite Residency for comfort.
+              Hotel Ospite Residency.
             </span>
           </h1>
           <p className="text-base md:text-xl font-body text-cream/70 mt-6 mb-10 max-w-xl mx-auto leading-relaxed">
