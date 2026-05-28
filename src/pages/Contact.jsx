@@ -5,13 +5,51 @@ import useReveal from '../components/useReveal'
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', checkin: '', checkout: '', room: '', plan: 'CP', guests: '1', message: '' })
   const [sent, setSent] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState(null)
   const r1 = useReveal()
 
   const handle = (e) => setForm({ ...form, [e.target.name]: e.target.value })
-  const submit = (e) => {
+  
+  const submit = async (e) => {
     e.preventDefault()
-    setSent(true)
-    setForm({ name: '', email: '', phone: '', checkin: '', checkout: '', room: '', plan: 'CP', guests: '1', message: '' })
+    setIsSubmitting(true)
+    setError(null)
+
+    const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || "2ee92319-6302-4aaa-995a-5e22ff141673"
+
+    const formData = new FormData()
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY)
+    formData.append("subject", "New Booking Inquiry - Ospite Residency")
+    formData.append("from_name", "Ospite Residency Website")
+    // Web3Forms: map email to replyto so replies go to the guest
+    if (form.email) formData.append("replyto", form.email)
+    // Web3Forms spam honeypot
+    formData.append("botcheck", "")
+
+    // Add all form fields
+    Object.entries(form).forEach(([key, value]) => {
+      formData.append(key, value)
+    })
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+      const data = await response.json()
+
+      if (data.success) {
+        setSent(true)
+        setForm({ name: '', email: '', phone: '', checkin: '', checkout: '', room: '', plan: 'CP', guests: '1', message: '' })
+      } else {
+        setError(data.message || "Something went wrong! Please try again.")
+      }
+    } catch (err) {
+      setError("Failed to send request. Please try again later.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const inputCls = 'w-full bg-cream border border-forest-200 rounded-xl px-4 py-3 text-sm font-body text-forest-800 placeholder-forest-300 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-400 transition-colors'
@@ -114,6 +152,8 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={submit} className="space-y-5">
+                {/* Web3Forms spam honeypot – must be hidden and unchecked */}
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className={labelCls}>Full Name *</label>
@@ -143,9 +183,9 @@ export default function Contact() {
                     <label className={labelCls}>Room Type</label>
                     <select name="room" value={form.room} onChange={handle} className={inputCls}>
                       <option value="">Any</option>
-                      <option>Super Deluxe</option>
-                      <option>Deluxe</option>
-                      <option>Standard</option>
+                      <option value="Super Deluxe">Super Deluxe</option>
+                      <option value="Deluxe">Deluxe</option>
+                      <option value="Standard">Standard</option>
                     </select>
                   </div>
                   <div>
@@ -160,7 +200,7 @@ export default function Contact() {
                   <div>
                     <label className={labelCls}>Guests</label>
                     <select name="guests" value={form.guests} onChange={handle} className={inputCls}>
-                      {[1,2,3,4,5,6].map(n => <option key={n}>{n}</option>)}
+                      {[1,2,3,4,5,6].map(n => <option key={n} value={String(n)}>{n}</option>)}
                     </select>
                   </div>
                 </div>
@@ -175,11 +215,27 @@ export default function Contact() {
                     className={inputCls + ' resize-none'}
                   />
                 </div>
+                {error && (
+                  <div className="text-red-500 text-sm font-body bg-red-50 p-3 rounded-lg border border-red-200">
+                    {error}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="btn-gold w-full py-4 rounded-xl text-forest-900 font-body font-semibold text-base tracking-wide"
+                  disabled={isSubmitting}
+                  className="btn-gold w-full py-4 rounded-xl text-forest-900 font-body font-semibold text-base tracking-wide disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2"
                 >
-                  Send Booking Request ✦
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5 text-forest-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Booking Request ✦"
+                  )}
                 </button>
               </form>
             )}
